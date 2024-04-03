@@ -106,7 +106,7 @@ app.get("/ar/:id", async (req, res) => {
     //   return res.status(404).send("Not found");
     // }
 
-    const filePath = path.join(__dirname, "/public/model.gltf");
+    const filePath = path.join(__dirname, "/public/model.glb");
     const fileExtension = path.extname(filePath);
 
     const contentType = "model/gltf-binary";
