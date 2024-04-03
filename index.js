@@ -169,7 +169,7 @@ app.get("/image", (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}`);
 
-  console.log("NODE_ENV: ", process.env.NODE_ENV, process.env.BSC_CHAIN_ID);
+  console.log("NODE_ENV: ", process.env.NODE_ENV);
 
   // referralEvent();
 });

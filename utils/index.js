@@ -1,14 +1,5 @@
-import { BSC_NETWORK_URL } from "../constant/config.js";
-import Web3 from "web3";
-
 import moment from "moment";
 import { ethers } from "ethers";
-
-const useWeb3 = (networkUrl) => {
-  return new Web3(
-    new Web3.providers.HttpProvider(networkUrl ? networkUrl : BSC_NETWORK_URL)
-  );
-};
 
 const useTryCatch = (fn) => (req, res, next) =>
   Promise.resolve(fn(req, res, next)).catch(next);
@@ -97,7 +88,6 @@ const returnBadRequest = (err, req, res, next) => {
 };
 
 export {
-  useWeb3,
   createRefCode,
   convertToDayArr,
   getDifBetweenDay,
